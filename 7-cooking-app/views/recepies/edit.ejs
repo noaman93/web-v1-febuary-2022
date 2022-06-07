@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Create New Recepie Form</h1>
+
+    <form action="/recepie-update/<%= foundRecepie.id %> " method="post">
+      <input
+        type="text"
+        name="title"
+        placeholder=" "
+        value="<%= foundRecepie.title %>"
+      />
+      <br />
+      <br />
+      <textarea
+        name="text"
+        id=""
+        cols="30"
+        rows="4"
+        placeholder="Enter description"
+      >
+<%= foundRecepie.text %> </textarea
+      >
+      <br />
+      <br />
+      <input
+        type="text"
+        name="img"
+        placeholder=" "
+        value="<%= foundRecepie.img  %>"
+      />
+      <br />
+      <br />
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

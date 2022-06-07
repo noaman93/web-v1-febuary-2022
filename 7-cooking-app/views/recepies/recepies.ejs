@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body>
+    <%- include("../partials/navbar") %>
+
+    <div class="container">
+      <h1>All Recepies</h1>
+      <a href="/recepie/new">Create New Recepie</a>
+
+      <% for(let r of recepies){ %>
+      <div class="div">
+        <h3><%= r.title %></h3>
+        <img src="<%= r.img %>" alt="" />
+        <p><%= r.text %></p>
+        <a href="/recepie/<%= r.id  %>">Show details</a>
+      </div>
+      <hr />
+      <% } %>
+    </div>
+
+    <%- include("../partials/footer") %>
+  </body>
+</html>
